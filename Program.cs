@@ -30,7 +30,7 @@
 // }
 
 
-// Console.WriteLine("Введите нужные числа в одну строку с одним пробелом между числами, без пробелов в начале и конце строки:");
+// Console.WriteLine("Введите нужные числа в одну строку, с одним пробелом между числами, без пробелов в начале и конце строки:");
 // string numbers = Console.ReadLine(); 
 // int[] array = NumbersFromString(numbers);
 // int size = array.Length;
@@ -49,17 +49,34 @@
 //y = k1(x + b1)
 //y = k2(x + b2)
 
-// Console.WriteLine("Введите значение b1 ");
-// int b1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите значение k1 ");
-// int k1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите значение b2 ");
-// int b2 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите значение k2 ");
-// int k2 = Convert.ToInt32(Console.ReadLine());
+
 
 
 // Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 // 45 -> 101101
 // 3 -> 11
 // 2 -> 10
+
+// string DecimalToBinary (int decimalNumber)       
+// {
+//     string temp = "";
+//     while (decimalNumber != 1)
+//     {
+//         temp = temp + Convert.ToString(decimalNumber % 2);
+//         decimalNumber = decimalNumber / 2;
+//     }
+//     temp += '1';
+//     int stringSize = temp.Length;
+//     string reverseTemp = "";
+//     for (int i = 0; i < stringSize; i++)
+//     {
+//         reverseTemp += temp[stringSize - i - 1];   
+//     }
+//     return reverseTemp;
+// }
+
+
+// Console.WriteLine("Введите десятичное число");
+// int number = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine($"Число {number} (десятичная) = {DecimalToBinary(number)} (двоичная)");
+
