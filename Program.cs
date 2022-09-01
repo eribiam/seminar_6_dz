@@ -65,26 +65,25 @@
 // 3 -> 11
 // 2 -> 10
 
-// string DecimalToBinary (int decimalNumber)       
-// {
-//     string temp = "";
-//     while (decimalNumber != 1)
-//     {
-//         temp = temp + Convert.ToString(decimalNumber % 2);
-//         decimalNumber = decimalNumber / 2;
-//     }
-//     temp += '1';
-//     int stringSize = temp.Length;
-//     string reverseTemp = "";
-//     for (int i = 0; i < stringSize; i++)
-//     {
-//         reverseTemp += temp[stringSize - i - 1];   
-//     }
-//     return reverseTemp;
-// }
+string DecimalToBinary (int decimalNumber)       
+{
+    string temp = "";
+    while (decimalNumber >= 1)
+    {
+        temp = temp + Convert.ToString(decimalNumber % 2);
+        decimalNumber = decimalNumber / 2;
+    }
+    int stringSize = temp.Length;
+    string reverseTemp = "";
+    for (int i = 0; i < stringSize; i++)
+    {
+        reverseTemp += temp[stringSize - i - 1];   
+    }
+    return reverseTemp;
+}
 
 
-// Console.WriteLine("Введите десятичное число");
-// int number = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine($"Число {number} (десятичная) = {DecimalToBinary(number)} (двоичная)");
+Console.WriteLine("Введите десятичное число");
+int number = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine($"Число {number} (десятичная) = {DecimalToBinary(number)} (двоичная)");
 
